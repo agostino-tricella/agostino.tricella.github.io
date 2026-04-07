@@ -3,119 +3,239 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agostino Tricella | IT Application Manager</title>
+    <title>Agostino Tricella | Senior IT Leader</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
-            --primary-blue: #0056b3;
-            --dark-navy: #1a2a3a;
-            --light-bg: #f8f9fa;
-            --accent: #3498db;
+            --primary-blue: #004a99; /* Blu più profondo e professionale */
+            --accent-cyan: #00bcd4; /* Un tocco di ciano per l'innovazione */
+            --dark-navy: #101d29;
+            --light-bg: #f0f4f8;
+            --text-main: #2c3e50;
+            --shadow-card: 0 10px 30px rgba(0,0,0,0.08);
+            --transition-fast: all 0.3s ease;
         }
-        body { font-family: 'Segoe UI', system-ui, sans-serif; line-height: 1.6; color: #333; background: var(--light-bg); margin: 0; }
-        .hero { background: var(--dark-navy); color: white; padding: 80px 20px; text-align: center; }
-        .hero h1 { margin: 0; font-size: 2.8rem; letter-spacing: -1px; }
-        .hero p { font-size: 1.2rem; opacity: 0.9; margin-top: 10px; }
         
-        .container { max-width: 850px; margin: -50px auto 50px; padding: 0 20px; }
-        .card { background: white; border-radius: 12px; padding: 40px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); margin-bottom: 30px; }
+        body { 
+            font-family: 'Open Sans', sans-serif; 
+            line-height: 1.7; 
+            color: var(--text-main); 
+            background: var(--light-bg); 
+            margin: 0; padding: 0;
+            scroll-behavior: smooth;
+        }
         
-        h2 { color: var(--primary-blue); border-bottom: 2px solid #eee; padding-bottom: 10px; margin-top: 0; display: flex; align-items: center; }
-        h2 i { margin-right: 15px; font-size: 1.5rem; }
-        
-        .profile-text { font-size: 1.1rem; color: #444; text-align: justify; }
+        h1, h2, h3, .job-title { font-family: 'Poppins', sans-serif; font-weight: 600; }
 
-        .exp-item { margin-bottom: 40px; position: relative; padding-left: 25px; border-left: 3px solid var(--accent); }
-        .exp-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; }
-        .job-title { font-weight: bold; font-size: 1.3rem; color: var(--dark-navy); }
-        .company-date { color: var(--primary-blue); font-weight: 600; margin-bottom: 15px; }
+        /* HERO SECTION CON FOTO */
+        .hero { 
+            background: linear-gradient(135deg, var(--dark-navy) 0%, #1a3a5a 100%);
+            color: white; 
+            padding: 100px 20px 120px; 
+            text-align: center; 
+            position: relative;
+        }
         
-        ul { padding-left: 20px; }
-        li { margin-bottom: 10px; }
-        .highlight { color: var(--primary-blue); font-weight: bold; }
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            margin-bottom: 25px;
+            object-fit: cover; /* Assicura che la foto non sia deformata */
+            /* placeholder se non carichi la foto */
+            background-color: #ccc; 
+            background-image: url('profile.jpg'); /* Nome del file della tua foto */
+            background-size: cover;
+        }
+
+        .hero h1 { margin: 0; font-size: 3.2rem; letter-spacing: -1.5px; line-height: 1.1; }
+        .hero p { font-size: 1.3rem; opacity: 0.9; margin-top: 15px; font-weight: 300; max-width: 600px;}
         
-        .skills-container { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
-        .skill-badge { background: #e9ecef; padding: 8px 16px; border-radius: 25px; font-size: 0.9rem; font-weight: 600; color: var(--dark-navy); }
+        /* CONTENITORE PRINCIPALE */
+        .container { max-width: 900px; margin: -60px auto 60px; padding: 0 20px; position: relative; z-index: 10; }
         
-        .contact-footer { text-align: center; padding: 40px; }
-        .btn-linkedin { background: #0077b5; color: white; padding: 15px 35px; border-radius: 30px; text-decoration: none; font-weight: bold; transition: 0.3s; }
+        /* SCHEDE (CARDS) ANIMATE */
+        .card { 
+            background: white; 
+            border-radius: 16px; 
+            padding: 45px; 
+            box-shadow: var(--shadow-card); 
+            margin-bottom: 35px; 
+            transition: var(--transition-fast);
+            border: 1px solid rgba(0,0,0,0.03);
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+        }
+        
+        h2 { 
+            color: var(--primary-blue); 
+            border-bottom: 3px solid var(--light-bg); 
+            padding-bottom: 15px; 
+            margin-top: 0; 
+            display: flex; 
+            align-items: center; 
+            font-size: 1.8rem;
+        }
+        
+        h2 i { margin-right: 18px; font-size: 1.6rem; color: var(--accent-cyan); }
+        
+        /* PROFILO: Copywriting Energetico */
+        .profile-text { font-size: 1.15rem; color: #4f5f6f; text-align: justify; }
+        .profile-text strong { color: var(--primary-blue); }
+
+        /* ESPERIENZE: Timeline Style */
+        .exp-item { margin-bottom: 45px; position: relative; padding-left: 30px; border-left: 3px solid #e1e8ed; transition: var(--transition-fast); }
+        .exp-item:hover { border-left-color: var(--accent-cyan); }
+        
+        .exp-item::before {
+            content: '';
+            position: absolute;
+            left: -10px;
+            top: 5px;
+            width: 17px;
+            height: 17px;
+            background: white;
+            border: 3px solid #e1e8ed;
+            border-radius: 50%;
+            transition: var(--transition-fast);
+        }
+        
+        .exp-item:hover::before { border-color: var(--accent-cyan); background: var(--accent-cyan); }
+
+        .job-title { font-size: 1.4rem; color: var(--dark-navy); margin-bottom: 2px; }
+        .company-date { color: var(--primary-blue); font-weight: 600; font-size: 1rem; margin-bottom: 18px; display: block;}
+        
+        ul { padding-left: 20px; list-style-type: none; }
+        li { margin-bottom: 12px; position: relative; }
+        li::before { content: "→"; color: var(--accent-cyan); position: absolute; left: -25px; font-weight: bold; }
+        
+        .highlight { background: linear-gradient(to right, rgba(0,188,212,0.1), rgba(0,188,212,0)); padding: 2px 5px; border-radius: 4px; color: var(--primary-blue); font-weight: 600; }
+        
+        /* COMPETENZE: Visual Badge Style */
+        .skills-container { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 25px; }
+        .skill-badge { 
+            background: white; 
+            padding: 10px 20px; 
+            border-radius: 30px; 
+            font-size: 0.95rem; 
+            font-weight: 600; 
+            color: var(--primary-blue); 
+            border: 2px solid var(--light-bg);
+            transition: var(--transition-fast);
+            display: flex; align-items: center;
+        }
+        
+        .skill-badge i { margin-right: 10px; color: var(--accent-cyan); }
+        .skill-badge:hover { background: var(--primary-blue); color: white; border-color: var(--primary-blue); }
+        .skill-badge:hover i { color: white; }
+        
+        /* FOOTER CON CTA CHIARE */
+        .contact-footer { text-align: center; padding: 60px 20px; background: var(--dark-navy); color: white; margin-top: 60px; }
+        .contact-footer h3 { font-size: 2rem; margin-bottom: 30px; }
+        
+        .btn-cta { 
+            display: inline-block; 
+            padding: 18px 40px; 
+            border-radius: 35px; 
+            text-decoration: none; 
+            font-weight: 700; 
+            font-size: 1.1rem;
+            transition: var(--transition-fast); 
+            margin: 10px;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .btn-email { background: white; color: var(--dark-navy); }
+        .btn-email:hover { background: var(--accent-cyan); color: white; transform: translateY(-3px); }
+        
+        .btn-linkedin { background: #0077b5; color: white; }
         .btn-linkedin:hover { background: #005582; transform: translateY(-3px); }
     </style>
 </head>
 <body>
 
 <div class="hero">
-    <h1>Agostino Tricella</h1>
-    <p>IT Director CTO </p>
+    <div class="hero-content">
+        <div class="profile-img"></div>
+        <h1>Agostino Tricella</h1>
+        <p>Driving Digital Transformation & Operational Excellence through Strategic IT Leadership in EMEA</p>
+    </div>
 </div>
 
 <div class="container">
     <div class="card">
-        <h2><i class="fas fa-user"></i> Profilo Professionale</h2>
+        <h2><i class="fas fa-rocket"></i> Visione & Leadership</h2>
         <div class="profile-text">
             <p>
-                Esperto IT con una solida esperienza maturata in aziende multinazionali, dove ho ricoperto ruoli di crescente responsabilità 
-                Il mio punto di forza risiede nella gestione di strutture IT complesse, integrando innovazione e trasformazione digitale con le esigenze strategiche del business. 
+                Sono un <strong>Senior IT Leader</strong> con una solida traiettoria di successo nella gestione di ecosistemi tecnologici complessi all'interno di multinazionali leader. La mia missione è integrare l'innovazione digitale direttamente nel cuore delle strategie di business, trasformando l'IT da centro di costo a motore di crescita e competitività.
             </p>
             <p>
-                Specializzato nel riesame dei processi aziendali per favorire la crescita, l'efficienza operativa e il miglioramento dei livelli di servizio. 
-                Come manager, coordino ampi gruppi di lavoro promuovendo un approccio strutturato basato sulla delega, l'armonia del team e il rispetto dei ruoli.
+                Specializzato nel <span class="highlight">riesame radicale dei processi aziendali</span>, guido la trasformazione per massimizzare l'efficienza operativa e l'agilità organizzativa. Coordino ampi team multifunzionali promuovendo una cultura basata sull'armonia, la delega responsabile e una chiara visione degli obiettivi comuni.
             </p>
         </div>
     </div>
 
     <div class="card">
-        <h2><i class="fas fa-briefcase"></i> Esperienze Professionali</h2>
+        <h2><i class="fas fa-history"></i> Percorso di Impatto</h2>
 
         <div class="exp-item">
-            <div class="exp-header">
-                <div class="job-title">IT Application Manager EMEA</div>
-            </div>
-            <div class="company-date">Fontana Gruppo SPA | 2022 — Attuale </div>
+            <span class="job-title">IT Application Manager EMEA</span>
+            <span class="company-date">Fontana Gruppo SPA | 2022 — Attuale</span>
             <ul>
-                <li>Coordinamento di risorse interne per garantire il corretto funzionamento dei <span class="highlight">sistemi informativi aziendali</span>.</li>
-                <li>Responsabile del rollout del progetto <span class="highlight">SAP S/4HANA</span> per le realtà europee del gruppo.</li>
+                <li>Orchestro team interni ed esterni per garantire l'eccellenza operativa dei <span class="highlight">sistemi informativi critici</span> del gruppo.</li>
+                <li>Guido strategicamente il rollout paneuropeo del progetto <span class="highlight">SAP S/4HANA</span>, digitalizzando i processi chiave in EMEA.</li>
             </ul>
         </div>
 
         <div class="exp-item">
-            <div class="exp-header">
-                <div class="job-title">CTO</div>
-            </div>
-            <div class="company-date">Nestlé Italiana Spa | 2012 — 2022 </div>
+            <span class="job-title">IT Manager (Transformational Leader)</span>
+            <span class="company-date">Nestlé Italiana Spa | 2012 — 2022</span>
             <ul>
-                <li>Leadership di un team di 30 risorse e gestione di un budget IT locale di <span class="highlight">10M€</span> (7M€ spesa, 3M€ investimenti).</li>
-                <li>Coordinamento del progetto di <span class="highlight">Industry 4.0</span> per la digitalizzazione e interconnessione degli stabilimenti produttivi.</li>
-                <li>Project Management per l'implementazione internazionale di <span class="highlight">Service Now (ITSM)</span> e migrazione a SAP S/4HANA.</li>
-                <li>Gestione della migrazione di 5.000 postazioni di lavoro verso Windows 10 e OneDrive.</li>
+                <li>Leadership diretta su un team di 30 talenti e gestione ottimizzata di un budget IT di <span class="highlight">10M€</span> (CAPEX/OPEX).</li>
+                <li>Direzione del programma <span class="highlight">Industry 4.0</span>: digitalizzazione e interconnessione degli stabilimenti produttivi per la massima efficienza.</li>
+                <li>Project Management internazionale per l'implementazione di <span class="highlight">Service Now (ITSM)</span> e la transizione a SAP S/4HANA.</li>
+                <li>Esecuzione della migrazione tecnologica Cloud per 5.000 utenti (Windows 10, OneDrive) a impatto zero sul business.</li>
             </ul>
         </div>
     </div>
 
     <div class="card">
-        <h2><i class="fas fa-tools"></i> Competenze Tecniche</h2>
+        <h2><i class="fas fa-cogs"></i> Core Competencies</h2>
         <div class="skills-container">
-            <div class="skill-badge">SAP S/4HANA </div>
-            <div class="skill-badge">IT Management </div>
-            <div class="skill-badge">Project Management </div>
-            <div class="skill-badge">Industry 4.0 </div>
-            <div class="skill-badge">ITIL Certified </div>
-            <div class="skill-badge">Service Now (ITSM) </div>
-            <div class="skill-badge">English (C1) </div>
+            <div class="skill-badge"><i class="fas fa-cloud"></i> SAP S/4HANA & Cloud</div>
+            <div class="skill-badge"><i class="fas fa-tasks"></i> Strategic IT Management</div>
+            <div class="skill-badge"><i class="fas fa-chart-line"></i> Digital Transformation</div>
+            <div class="skill-badge"><i class="fas fa-industry"></i> Industry 4.0</div>
+            <div class="skill-badge"><i class="fas fa-certificate"></i> ITIL Certified</div>
+            <div class="skill-badge"><i class="fas fa-headset"></i> Service Now (ITSM)</div>
+            <div class="skill-badge"><i class="fas fa-globe"></i> EMEA Business Partnering</div>
         </div>
-    </div>
-
-    <div class="contact-footer">
-        <a href="mailto:atricella68@gmail.com" class="btn-linkedin" style="background: #2c3e50; margin-right: 10px;">
-            <i class="fas fa-envelope"></i> Contattami via Email
-        </a>
-        <a href="https://www.linkedin.com/in/agostino-tricella-a82714" class="btn-linkedin">
-            <i class="fab fa-linkedin"></i> Profilo LinkedIn
-        </a>
     </div>
 </div>
 
-</body>
-</html>
+<div class="contact-footer">
+    <h3>Connettiamoci per costruire il futuro</h3>
+    <a href="mailto:atricella68@gmail.com" class="btn-cta btn-email">
+        <i class="fas fa-envelope"></i> Invia un'Email
+    </a>
+    <a href="https://www.linkedin.com/in/tuo-profilo-linkedin" class="btn-cta btn-linkedin" target="_blank">
+        <i class="fab fa-linkedin"></i> Profilo LinkedIn
+    </a>
+</div>
+
 </body>
 </html>
