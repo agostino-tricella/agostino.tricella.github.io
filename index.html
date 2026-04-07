@@ -3,88 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profilo Professionale | Consulenza SAP & EDI</title>
+    <title>Agostino Tricella | IT Application Manager</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
-            --primary: #2c3e50;
-            --secondary: #3498db;
-            --text: #333;
-            --bg: #f8f9fa;
+            --primary-blue: #0056b3;
+            --dark-navy: #1a2a3a;
+            --light-bg: #f8f9fa;
+            --accent: #3498db;
         }
-        body { 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            line-height: 1.6; 
-            color: var(--text); 
-            background-color: var(--bg); 
-            margin: 0; 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            min-height: 100vh; 
-        }
-        .container { 
-            background: white; 
-            max-width: 600px; 
-            width: 90%; 
-            padding: 40px; 
-            border-radius: 15px; 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
-            text-align: center;
-        }
-        h1 { color: var(--primary); margin-bottom: 5px; font-size: 2.2rem; }
-        .subtitle { color: var(--secondary); font-weight: bold; font-size: 1.1rem; margin-top: 0; }
-        .stats { 
-            display: flex; 
-            justify-content: space-around; 
-            background: #f1f7ff; 
-            padding: 15px; 
-            border-radius: 10px; 
-            margin: 25px 0;
-        }
-        .stat-item b { display: block; font-size: 1.4rem; color: var(--primary); }
-        .stat-item span { font-size: 0.8rem; text-transform: uppercase; color: #777; }
-        .bio { text-align: left; margin: 20px 0; border-top: 1px solid #eee; padding-top: 20px; }
-        .btn { 
-            display: inline-block; 
-            background: var(--primary); 
-            color: white; 
-            padding: 12px 25px; 
-            text-decoration: none; 
-            border-radius: 5px; 
-            font-weight: bold;
-            transition: background 0.3s;
-        }
-        .btn:hover { background: var(--secondary); }
+        body { font-family: 'Segoe UI', system-ui, sans-serif; line-height: 1.6; color: #333; background: var(--light-bg); margin: 0; }
+        .hero { background: var(--dark-navy); color: white; padding: 80px 20px; text-align: center; }
+        .hero h1 { margin: 0; font-size: 2.8rem; letter-spacing: -1px; }
+        .hero p { font-size: 1.2rem; opacity: 0.9; margin-top: 10px; }
+        
+        .container { max-width: 850px; margin: -50px auto 50px; padding: 0 20px; }
+        .card { background: white; border-radius: 12px; padding: 40px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); margin-bottom: 30px; }
+        
+        h2 { color: var(--primary-blue); border-bottom: 2px solid #eee; padding-bottom: 10px; margin-top: 0; display: flex; align-items: center; }
+        h2 i { margin-right: 15px; font-size: 1.5rem; }
+        
+        .exp-item { margin-bottom: 40px; position: relative; padding-left: 25px; border-left: 3px solid var(--accent); }
+        .exp-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; }
+        .job-title { font-weight: bold; font-size: 1.3rem; color: var(--dark-navy); }
+        .company-date { color: var(--primary-blue); font-weight: 600; margin-bottom: 15px; }
+        
+        ul { padding-left: 20px; }
+        li { margin-bottom: 10px; }
+        .highlight { color: var(--primary-blue); font-weight: bold; }
+        
+        .skills-container { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+        .skill-badge { background: #e9ecef; padding: 8px 16px; border-radius: 25px; font-size: 0.9rem; font-weight: 600; color: var(--dark-navy); }
+        
+        .contact-footer { text-align: center; padding: 40px; }
+        .btn-linkedin { background: #0077b5; color: white; padding: 15px 35px; border-radius: 30px; text-decoration: none; font-weight: bold; transition: 0.3s; }
+        .btn-linkedin:hover { background: #005582; transform: translateY(-3px); }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <h1>[IL TUO NOME]</h1>
-    <p class="subtitle">SAP Specialist & EDI Integration Expert</p>
-
-    <div class="stats">
-        <div class="stat-item">
-            <b>27k+</b>
-            <span>Doc / Anno</span>
-        </div>
-        <div class="stat-item">
-            <b>2</b>
-            <span>Legal Entities</span>
-        </div>
-        <div class="stat-item">
-            <b>EDI</b>
-            <span>Expertise</span>
-        </div>
-    </div>
-
-    <div class="bio">
-        <p>Specializzato nella gestione di flussi documentali complessi e integrazione sistemi ERP. Esperienza consolidata nell'implementazione di soluzioni <b>E-Invoicing (Francia)</b> e middleware <b>Seeburger</b>.</p>
-        <p>Expertise tecnica: SAP IDoc, VIM, e-Reporting e compliance normativa internazionale.</p>
-    </div>
-
-    <a href="https://www.linkedin.com/in/tuo-profilo" class="btn">Contattami su LinkedIn</a>
+<div class="hero">
+    <h1>Agostino Tricella</h1>
+    <p>IT Application Manager EMEA | SAP S/4HANA Specialist</p>
 </div>
+
+<div class="container">
+    <div class="card">
+        <h2><i class="fas fa-briefcase"></i> Esperienze Professionali</h2>
+
+        <div class="exp-item">
+            <div class="exp-header">
+                <div class="job-title">IT Application Manager EMEA</div>
+            </div>
+            <div class="company-date">Fontana Gruppo SPA | 2022 — Attuale</div>
+            <ul>
+                <li>Coordinamento di diverse risorse interne per garantire il corretto funzionamento dei <span class="highlight">sistemi informativi aziendali</span>.</li>
+                <li>Responsabile del rollout del progetto <span class="highlight">SAP S/4HANA</span> per le realtà europee del gruppo.</li>
+                <li>Gestione delle applicazioni IT a supporto del business in ambito manufacturing e retail.</li>
+            </ul>
+        </div>
+
+        <div class="exp-item">
+            <div class="exp-header">
+                <div class="job-title">IT Manager</div>
+            </div>
+            <div class="company-date">Nestlé Italiana Spa | 2012 — 2022</div>
+            <ul>
+                <li>Leadership di un team di 30 risorse con gestione di un budget IT locale di <span class="highlight">10M€</span> (7M€ spesa, 3M€ investimenti).</li>
+                <li>Coordinamento del progetto di <span class="highlight">Industry 4.0</span> per la digitalizzazione e interconnessione degli stabilimenti produttivi del gruppo.</li>
+                <li>Project Management per l'implementazione internazionale di <span class="highlight">Service Now (ITSM)</span> e migrazione a SAP S/4HANA.</li>
+                <li>Gestione della migrazione tecnologica di 5.000 postazioni di lavoro verso soluzioni Cloud (Windows 10, OneDrive).</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2><i class="fas fa-tools"></i> Competenze Tecniche</h2>
+        <div class="skills-container">
+            <div class="skill-badge">SAP S/4HANA</div>
+            <div class="skill-badge">IT Application Management</div>
+            <div class="skill-badge">Project Management</div>
+            <div class="skill-badge">Industry 4.0</div>
+            <div class="skill-badge">ITIL Certified</div>
+            <div class="skill-badge">Service Now (ITSM)</div>
+            <div class="skill-badge">English (C1)</div>
+        </div>
+    </div>
+
+    <div class="contact-footer">
+        <a href="mailto:atricella68@gmail.com" class="btn-linkedin" style="background: #2c3e50; margin-right: 10px;">
+            <i class="fas fa-envelope"></i> Contattami via Email
+        </a>
+        <a href="https://www.linkedin.com/in/tuo-profilo-linkedin" class="btn-linkedin">
+            <i class="fab fa-linkedin"></i> Profilo LinkedIn
+        </a>
+    </div>
+</div>
+
+</body>
+</html>
 
 </body>
 </html>
