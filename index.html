@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
-            --primary-blue: #004a99; /* Blu più profondo e professionale */
-            --accent-cyan: #00bcd4; /* Un tocco di ciano per l'innovazione */
+            --primary-blue: #004a99; 
+            --accent-cyan: #00bcd4; 
             --dark-navy: #101d29;
             --light-bg: #f0f4f8;
             --text-main: #2c3e50;
@@ -28,7 +28,26 @@
         
         h1, h2, h3, .job-title { font-family: 'Poppins', sans-serif; font-weight: 600; }
 
-        /* HERO SECTION CON FOTO */
+        /* SELETTORE LINGUA */
+        .lang-switch {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 100;
+        }
+        .lang-switch a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9rem;
+            padding: 5px 10px;
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 5px;
+            transition: var(--transition-fast);
+        }
+        .lang-switch a:hover { background: rgba(255,255,255,0.1); }
+
+        /* HERO SECTION */
         .hero { 
             background: linear-gradient(135deg, var(--dark-navy) 0%, #1a3a5a 100%);
             color: white; 
@@ -46,26 +65,23 @@
         }
 
         .profile-img {
-            width: 200px;
-            height: 200px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
             border: 5px solid white;
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
             margin-bottom: 25px;
-            object-fit: cover; /* Assicura che la foto non sia deformata */
-            /* placeholder se non carichi la foto */
+            object-fit: cover;
             background-color: #ccc; 
-            background-image: url('profile.jpg'); /* Nome del file della tua foto */
+            background-image: url('profile.jpg'); 
             background-size: cover;
         }
 
         .hero h1 { margin: 0; font-size: 3.2rem; letter-spacing: -1.5px; line-height: 1.1; }
         .hero p { font-size: 1.3rem; opacity: 0.9; margin-top: 15px; font-weight: 300; max-width: 600px;}
         
-        /* CONTENITORE PRINCIPALE */
         .container { max-width: 900px; margin: -60px auto 60px; padding: 0 20px; position: relative; z-index: 10; }
         
-        /* SCHEDE (CARDS) ANIMATE */
         .card { 
             background: white; 
             border-radius: 16px; 
@@ -93,11 +109,9 @@
         
         h2 i { margin-right: 18px; font-size: 1.6rem; color: var(--accent-cyan); }
         
-        /* PROFILO: Copywriting Energetico */
         .profile-text { font-size: 1.15rem; color: #4f5f6f; text-align: justify; }
         .profile-text strong { color: var(--primary-blue); }
 
-        /* ESPERIENZE: Timeline Style */
         .exp-item { margin-bottom: 45px; position: relative; padding-left: 30px; border-left: 3px solid #e1e8ed; transition: var(--transition-fast); }
         .exp-item:hover { border-left-color: var(--accent-cyan); }
         
@@ -125,7 +139,6 @@
         
         .highlight { background: linear-gradient(to right, rgba(0,188,212,0.1), rgba(0,188,212,0)); padding: 2px 5px; border-radius: 4px; color: var(--primary-blue); font-weight: 600; }
         
-        /* COMPETENZE: Visual Badge Style */
         .skills-container { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 25px; }
         .skill-badge { 
             background: white; 
@@ -141,9 +154,7 @@
         
         .skill-badge i { margin-right: 10px; color: var(--accent-cyan); }
         .skill-badge:hover { background: var(--primary-blue); color: white; border-color: var(--primary-blue); }
-        .skill-badge:hover i { color: white; }
         
-        /* FOOTER CON CTA CHIARE */
         .contact-footer { text-align: center; padding: 60px 20px; background: var(--dark-navy); color: white; margin-top: 60px; }
         .contact-footer h3 { font-size: 2rem; margin-bottom: 30px; }
         
@@ -168,6 +179,10 @@
 </head>
 <body>
 
+<div class="lang-switch">
+    <a href="#">ITA</a> | <a href="index_en.html">ENG</a>
+</div>
+
 <div class="hero">
     <div class="hero-content">
         <div class="profile-img"></div>
@@ -178,13 +193,13 @@
 
 <div class="container">
     <div class="card">
-        <h2><i class="fas fa-rocket"></i> Visione & Leadership</h2>
+        <h2><i class="fas fa-rocket"></i> Profilo Professionale</h2>
         <div class="profile-text">
             <p>
-                Sono un <strong>Senior IT Leader</strong> con una solida traiettoria di successo nella gestione di ecosistemi tecnologici complessi all'interno di multinazionali leader. La mia missione è integrare l'innovazione digitale direttamente nel cuore delle strategie di business, trasformando l'IT da centro di costo a motore di crescita e competitività.
+                Sono un <strong>Senior IT Leader</strong> con una solida esperienza nell'ICT maturata in aziende multinazionali, dove ho ricoperto ruoli di crescente responsabilità[cite: 3, 4]. Il mio punto di forza risiede nella gestione di strutture IT complesse, integrando innovazione e trasformazione digitale con le esigenze strategiche del business[cite: 5].
             </p>
             <p>
-                Specializzato nel <span class="highlight">riesame radicale dei processi aziendali</span>, guido la trasformazione per massimizzare l'efficienza operativa e l'agilità organizzativa. Coordino ampi team multifunzionali promuovendo una cultura basata sull'armonia, la delega responsabile e una chiara visione degli obiettivi comuni.
+                Specializzato nel riesame dei processi aziendali per favorire la crescita, la riduzione dei costi e il miglioramento dei livelli di servizio[cite: 7]. Come manager, coordino ampi gruppi di lavoro promuovendo un approccio strutturato basato sulla delega responsabile e l'armonia organizzativa[cite: 10].
             </p>
         </div>
     </div>
@@ -194,43 +209,43 @@
 
         <div class="exp-item">
             <span class="job-title">IT Application Manager EMEA</span>
-            <span class="company-date">Fontana Gruppo SPA | 2022 — Attuale</span>
+            <span class="company-date">Fontana Gruppo SPA | 2022 — Attuale [cite: 12, 14]</span>
             <ul>
-                <li>Orchestro team interni ed esterni per garantire l'eccellenza operativa dei <span class="highlight">sistemi informativi critici</span> del gruppo.</li>
-                <li>Guido strategicamente il rollout paneuropeo del progetto <span class="highlight">SAP S/4HANA</span>, digitalizzando i processi chiave in EMEA.</li>
+                <li>Coordinamento di diverse risorse interne per garantire l'eccellenza dei <span class="highlight">sistemi informativi aziendali</span>[cite: 15].</li>
+                <li>Responsabile del rollout del progetto <span class="highlight">SAP S/4HANA</span> per le realtà europee del gruppo[cite: 16].</li>
             </ul>
         </div>
 
         <div class="exp-item">
-            <span class="job-title">IT Manager (Transformational Leader)</span>
-            <span class="company-date">Nestlé Italiana Spa | 2012 — 2022</span>
+            <span class="job-title">IT Manager</span>
+            <span class="company-date">Nestlé Italiana Spa | 2012 — 2022 [cite: 17, 19]</span>
             <ul>
-                <li>Leadership diretta su un team di 30 talenti e gestione ottimizzata di un budget IT di <span class="highlight">10M€</span> (CAPEX/OPEX).</li>
-                <li>Direzione del programma <span class="highlight">Industry 4.0</span>: digitalizzazione e interconnessione degli stabilimenti produttivi per la massima efficienza.</li>
-                <li>Project Management internazionale per l'implementazione di <span class="highlight">Service Now (ITSM)</span> e la transizione a SAP S/4HANA.</li>
-                <li>Esecuzione della migrazione tecnologica Cloud per 5.000 utenti (Windows 10, OneDrive) a impatto zero sul business.</li>
+                <li>Leadership di un team di 30 risorse e gestione di un budget IT locale di <span class="highlight">10M€</span>[cite: 22].</li>
+                <li>Direzione del progetto di <span class="highlight">Industry 4.0</span> per la digitalizzazione e interconnessione delle fabbriche, con sgravi fiscali per 50M€[cite: 25, 26].</li>
+                <li>Project Management per l'implementazione internazionale di <span class="highlight">Service Now (ITSM)</span> e migrazione a SAP S/4HANA[cite: 28, 31, 32].</li>
+                <li>Gestione della migrazione tecnologica di 5.000 postazioni di lavoro verso Windows 10 e OneDrive[cite: 34].</li>
             </ul>
         </div>
     </div>
 
     <div class="card">
-        <h2><i class="fas fa-cogs"></i> Core Competencies</h2>
+        <h2><i class="fas fa-cogs"></i> Competenze Chiave</h2>
         <div class="skills-container">
-            <div class="skill-badge"><i class="fas fa-cloud"></i> SAP S/4HANA & Cloud</div>
-            <div class="skill-badge"><i class="fas fa-tasks"></i> Strategic IT Management</div>
-            <div class="skill-badge"><i class="fas fa-chart-line"></i> Digital Transformation</div>
+            <div class="skill-badge"><i class="fas fa-cloud"></i> SAP S/4HANA</div>
+            <div class="skill-badge"><i class="fas fa-tasks"></i> IT Application Management</div>
+            <div class="skill-badge"><i class="fas fa-chart-line"></i> Trasformazione Digitale</div>
             <div class="skill-badge"><i class="fas fa-industry"></i> Industry 4.0</div>
-            <div class="skill-badge"><i class="fas fa-certificate"></i> ITIL Certified</div>
+            <div class="skill-badge"><i class="fas fa-certificate"></i> Certificazione ITIL [cite: 61]</div>
             <div class="skill-badge"><i class="fas fa-headset"></i> Service Now (ITSM)</div>
-            <div class="skill-badge"><i class="fas fa-globe"></i> EMEA Business Partnering</div>
+            <div class="skill-badge"><i class="fas fa-comment"></i> Inglese: Livello C1 [cite: 63]</div>
         </div>
     </div>
 </div>
 
 <div class="contact-footer">
-    <h3>Connettiamoci per costruire il futuro</h3>
+    <h3>Costruiamo insieme il futuro digitale</h3>
     <a href="mailto:atricella68@gmail.com" class="btn-cta btn-email">
-        <i class="fas fa-envelope"></i> Invia un'Email
+        <i class="fas fa-envelope"></i> Invia un'Email [cite: 2]
     </a>
     <a href="https://www.linkedin.com/in/tuo-profilo-linkedin" class="btn-cta btn-linkedin" target="_blank">
         <i class="fab fa-linkedin"></i> Profilo LinkedIn
